@@ -1,0 +1,162 @@
+/*All files*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.containerPadding {
+    padding: 0rem 4rem;
+}
+
+
+/* Index.html*/
+.header {
+    background-image: linear-gradient(crimson, orangered, red);
+    color: #fff;
+    margin-bottom: 1rem;
+    padding: 2.6rem 1rem;
+    text-align: center;
+}
+
+#intro {
+    font-size: 2.3rem;
+}
+
+.hyplink:hover {
+    background-color: mistyrose;
+}
+
+#topics {
+    margin-bottom: 1rem;
+}
+
+#mainbody {
+    padding: 1rem 1.5rem;
+    padding-bottom: 2rem;
+}
+
+#trivia_head {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0rem 2rem;
+    padding-bottom: 1rem;
+}
+
+.questions {
+    padding: 0rem 3rem;
+}
+
+.q {
+    font-size: medium;
+}
+
+.tr:visited, .tr:focus {
+    background-color: chartreuse !important;
+    border-color: chartreuse !important;
+}
+
+.fl:visited, .fl:focus {
+    background-color: red !important;
+    border-color: red !important;
+}
+
+.nil:visited, .nil:focus {
+    background-color: dodgerblue !important;
+    border-color: cornflowerblue !important;
+}
+
+#aesthetic {
+    width: 45.25rem;
+    height: 24.85rem;
+}
+
+#footr {
+    text-align: center;
+}
+
+/* ai.html*/
+
+.generic_col {
+    padding: 0.8rem 1rem;
+}
+
+.generic_col:hover {
+
+}
+
+.strng {
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    font-size: larger;
+}
+
+.sml {
+    font-size: x-small;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.embed-video {
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive_image {
+    max-width: 100%;
+    height: auto;
+}
+
+/*warriors.html*/
+
+.gsw_btn:hover {
+    background-color:lightblue !important;
+}
+
+.box_pad {
+    margin-bottom: 1rem;
+}
+
+.large-txt {
+    font-size: larger;
+}
+
+.playerTable {
+    overflow: scroll;
+}
+
+/*places.html*/
+
+.card-txt {
+    font-family: 'Google Sans', Arial, Helvetica, sans-serif;
+}
+
+.moreTxt {
+    display: none;
+}
+
+.moreBtn {
+    background-color: lightblue !important;
+}
+
+.moreBtn:hover {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cleanLink {
+    text-decoration: none;
+    font-style: italic;
+}
+
+.cleanLink:hover {
+    font-size: 103%;
+}

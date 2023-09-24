@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Intro</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let correct1 = document.querySelector('.correct_opt1');
+                correct1.addEventListener('focus', function() {
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                })
+                let incorrects1 = document.querySelectorAll('.incorrect_opt1');
+                for (let i = 0; i < incorrects1.length; i++) {
+                    incorrects1[i].addEventListener('focus', function() {
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    })
+                }
+
+                let correct2 = document.querySelector('.correct_opt2');
+                correct2.addEventListener('focus', function() {
+                    document.querySelector('#feedback2').innerHTML = 'Correct!';
+                })
+                let incorrects2 = document.querySelectorAll('.incorrect_opt2');
+                for (let i = 0; i < incorrects2.length; i++) {
+                    incorrects2[i].addEventListener('focus', function() {
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    })
+                }
+
+                let correct3 = document.querySelector('.correct_opt3');
+                correct3.addEventListener('focus', function() {
+                    document.querySelector('#feedback3').innerHTML = 'Correct!';
+                })
+                let incorrects3 = document.querySelectorAll('.incorrect_opt3');
+                for (let i = 0; i < incorrects3.length; i++) {
+                    incorrects3[i].addEventListener('focus', function() {
+                        document.querySelector('#feedback3').innerHTML = 'Incorrect!';
+                    })
+                }
+
+                let correct4 = document.querySelector('.correct_opt4');
+                correct4.addEventListener('focus', function() {
+                    document.querySelector('#feedback4').innerHTML = 'Correct!';
+                })
+                let incorrects4 = document.querySelector('.incorrect_opt4');
+                incorrects4.addEventListener('focus', function() {
+                    document.querySelector('#feedback4').innerHTML = 'Incorrect!';
+                })
+
+                let correct5 = document.querySelector('.correct_opt5');
+                correct5.addEventListener('focus', function() {
+                    document.querySelector('#feedback5').innerHTML = 'Correct!';
+                })
+                let incorrects5 = document.querySelectorAll('.incorrect_opt5');
+                for (let i = 0; i < incorrects5.length; i++) {
+                    incorrects5[i].addEventListener('focus', function() {
+                        document.querySelector('#feedback5').innerHTML = 'Incorrect!';
+                    })
+                }
+
+                let correct6 = document.querySelector('.correct_opt6');
+                correct6.addEventListener('focus', function() {
+                    document.querySelector('#feedback6').innerHTML = 'Correct!';
+                })
+                let incorrects6 = document.querySelectorAll('.incorrect_opt6');
+                for (let i = 0; i < incorrects6.length; i++) {
+                    incorrects6[i].addEventListener('focus', function() {
+                        document.querySelector('#feedback6').innerHTML = 'Incorrect!';
+                    })
+                }
+
+                // Citation: Bootstrap5.2 documentation
+                const toastTrigger = document.getElementById('affirm')
+                const toastLiveExample = document.getElementById('liveToast')
+                if (toastTrigger) {
+                    toastTrigger.addEventListener('click', () => {
+                        const toast = new bootstrap.Toast(toastLiveExample)
+
+                        toast.show()
+                    })
+                }
+            })
+        </script>
+
+    </head>
+    <body>
+        <header class="header shadow-sm rounded-3">
+            <h1 id="intro">An introductory webpage</h1>
+            <small>By Arvind</small>
+        </header>
+        <main>
+            <div class="menu-primary-nav-container" id="topics">
+                <ul class="nav nav-tabs nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark hyplink shadow-sm" href="ai.html">Artificial Intelligence</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark hyplink shadow-sm" href="warriors.html">Golden State Warriors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark hyplink shadow-sm" href="places.html">Places</a>
+                    </li>
+                </ul>
+            </div>
+            <!--A set of trivia questions that hint to facts about the creator-->
+            <div class="section clearfix" id="mainbody">
+                <h2 id="trivia_head">About me</h2>
+                <div class="questions">
+                    <img id="aesthetic" src="programming_aesthetic.jpg" class="col-md-6 float-md-end mb-3 ms-md-3 shadow" alt="Programming aesthetic">
+                    <!--In the button classes, fl corresponds to false, tr to true and nil for non-true-false questions.-->
+                    <h3 class="q">Where did the comedian Hasan Minhaj go to college?</h3>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt1">Chennai, India</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt1">San Diego, CA</button>
+                    <button class="btn btn-light shadow-sm tr correct_opt1">Davis, CA</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt1">Berkeley, CA</button>
+                    <p id="feedback1"></p>
+                    <hr>
+                    <h3 class="q">Where was the stand-up comedian and actor Gabriel Iglesias born?</h3>
+                    <button class="btn btn-light shadow-sm tr correct_opt2">San Diego, CA</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt2">Long Beach, CA</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt2">El Paso, TX</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt2">Houston, TX</button>
+                    <p id="feedback2"></p>
+                    <hr>
+                    <h3 class="q">Who does legendary boxer Mike Tyson consider his biggest inspiration?</h3>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt3">Floyd Mayweather</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt3">Manny Pacquiao</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt3">Michael B. Jordan</button>
+                    <button class="btn btn-light shadow-sm tr correct_opt3">Muhammad Ali</button>
+                    <p id="feedback3"></p>
+                    <hr>
+                    <h3 class="q">Does Bill Gates like programming?</h3>
+                    <button class="btn btn-light shadow-sm tr correct_opt4">Yes</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt4">No</button>
+                    <p id="feedback4"></p>
+                    <hr>
+                    <h3 class="q">Who inspired the modern era of aeronautical research in India?</h3>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt5">Homi J. Bhabha</button>
+                    <button class="btn btn-light shadow-sm tr correct_opt5">A. P. J. Abdul Kalam</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt5">C. V. Raman</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt5">Subrahmanyan Chandrasekhar</button>
+                    <p id="feedback5"></p>
+                    <hr>
+                    <h3 class="q">Brian May, the rock band Queen's guitarist, earned an undergraduate degree in which field?</h3>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt6">Comparative literature</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt6">Music</button>
+                    <button class="btn btn-light shadow-sm fl incorrect_opt6">Visual and Performing arts</button>
+                    <button class="btn btn-light shadow-sm tr correct_opt6">Physics</button>
+                    <p id="feedback6"></p>
+                    <hr>
+                    <h3 class="q">Are you a Computer Science major?</h3>
+                    <button type="button" class="btn btn-light shadow-sm nil" id="affirm">Yes</button>
+                    <button type="button" class="btn btn-light shadow-sm nil">No</button>
+                    <hr>
+                </div>
+            </div>
+        </main>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="programming_aesthetic.jpg" style="width: 32px; height: 20px;" class="rounded me-2" alt="...">
+                    <strong class="me-auto">Programmer</strong>
+                    <small>now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    I recommend checking out the Artificial Intelligence page.
+                </div>
+            </div>
+        </div>
+        <footer id="footr"> Copyright &#169; Arvind Tawker</footer>
+    </body>
+</html>

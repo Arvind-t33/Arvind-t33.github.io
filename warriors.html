@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Golden State Warriors</title>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let leaders = document.querySelectorAll('.player_card');
+                let names = document.querySelectorAll('.player-entry');
+                let links = document.querySelectorAll('.linkShadow');
+
+                for (let i = 0; i < leaders.length; i++) {
+                    leaders[i].addEventListener('mouseover', function() {
+                        leaders[i].style.backgroundColor = "lightblue";
+                        leaders[i].classList.add('shadow-lg');
+                    })
+                    leaders[i].addEventListener('mouseout', function() {
+                        leaders[i].style.backgroundColor = "white";
+                        leaders[i].classList.remove('shadow-lg');
+                    })
+                }
+
+                for (let i = 0; i < names.length; i++) {
+                    names[i].addEventListener('mouseover', function() {
+                        names[i].style.backgroundColor = "lightblue";
+                        names[i].classList.add('shadow');
+                    })
+                    names[i].addEventListener('mouseout', function() {
+                        names[i].style.backgroundColor = "white";
+                        names[i].classList.remove('shadow');
+                    })
+                }
+
+                for (let i = 0; i < links.length; i++)
+                {
+                    links[i].addEventListener('mouseover', function() {
+                        links[i].classList.add('shadow-sm');
+                    })
+                    links[i].addEventListener('mouseout', function() {
+                        links[i].classList.remove('shadow-sm');
+                    })
+                }
+            })
+        </script>
+
+    </head>
+    <body>
+        <div>
+            <img width="100%" src="https://images.ctfassets.net/a4rx79jcl3n1/59Q3f0iQ2UqzW8xBVV5Cqj/915f79883753166cc31aa6980403a72f/2022-champions-banner-1340x210.png?w=1280" alt="" class="responsive_image shadow rounded-3">
+        </div>
+        <main>
+          <div class="menu-primary-nav-container" id="topics">
+            <ul class="nav nav-tabs nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link text-dark hyplink shadow-sm" href="index.html">Intro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark hyplink shadow-sm" href="ai.html">Artificial Intelligence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark hyplink shadow-sm" href="places.html">Places</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container-fluid overflow-hidden text-start clearfix shadow-sm containerPadding">
+            <div class="row gx-5">
+                <div class="col-6 generic_col">
+                    <a class=" gsw_btn btn btn-light" style="margin-bottom: 1rem;" href="https://www.nba.com/warriors" role="button">
+                        <img alt="Warriors" class="responsive_image" data-mptype="image" src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/gs.png&amp;h=50&amp;w=50">
+                        Golden State Warriors
+                    </a>
+                    <div class="p-3 border box_pad shadow-sm">
+                        <strong class="strng">Latest Golden State Warriors news</strong>
+                        <nav class="nav flex-column">
+                            <a class="nav-link text-dark linkShadow" href="https://www.espn.in/nba/team/_/name/gs/golden-state-warriors">
+                               <img width="100rem" alt="ESPN" src="espn.png">
+                            </a>
+                          <a class="nav-link text-dark linkShadow" href="https://bleacherreport.com/golden-state-warriors">Bleacher Report - Golden State Warriors</a>
+                        </nav>
+                    </div>
+                    <div class="p-3 border shadow-sm">
+                        <div class="col  playerTable">
+                            <a class="btn btn-light nav-link text-dark" href="https://www.nba.com/stats/team/1610612744/players-traditional/?Season=2021-22&SeasonType=Playoffs">GSW roster 2021-22</a>
+                            <table class="table table-striped">
+                                <tr>
+                                    <th>Players</th>
+                                    <th>Position</th>
+                                    <th>Jersey #</th>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/2738/">Andre Iguodala</a>
+                                    <td>SF</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/203952/">Andrew Wiggins</a></td>
+                                    <td>SF</td>
+                                    <td>22</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/1627814/">Damion Lee</a></td>
+                                    <td>SG</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/203110/">Draymond Green</a></td>
+                                    <td>PF</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/1627780/">Gary Payton II</a></td>
+                                    <td>SG</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/1630228/">Jonathan Kuminga</a></td>
+                                    <td>SF</td>
+                                    <td>00</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/1629673/">Jordan Poole</a></td>
+                                    <td>SG</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/1629308/">Juan Toscano-Anderson</a></td>
+                                    <td>SF</td>
+                                    <td>95</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/1626172/">Kevon Looney</a></td>
+                                    <td>C</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/202691/">Klay Thompson</a></td>
+                                    <td>SG</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/1630541/">Moses Moody</a></td>
+                                    <td>SG</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/202357/">Nemanja Bjelica</a></td>
+                                    <td>C</td>
+                                    <td>8</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/203490/">Otto Porter Jr.</a></td>
+                                    <td>PF</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr class="nav-item playerDetails">
+                                    <td class="player-entry rounded-3"><a class=" nav-link text-dark" href="https://www.nba.com/stats/player/201939/">Stephen Curry</a></td>
+                                    <td>PG</td>
+                                    <td>30</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 generic_col">
+                   <div class="p-3 border box_pad shadow-sm">
+                    <p>Golden State Warriors Highlights 2021-22</p>
+                    <div class="video-container">
+                        <iframe class="embed-video" allowfullscreen width="560" height="315" frameborder="0" src="https://www.youtube.com/embed/videoseries?list=PL2co6yhmsbDsIAOC1n5zzufDqjbGCQzZs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
+                 </div>
+                 <div class="p-3 border shadow-sm">
+                    <strong class="strng">Team Leaders</strong>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                        <div class="col">
+                            <div class="card rounded-5 player_card h-100">
+                                <img alt="Stephen Curry" class="card-img-top" data-mptype="image" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png&amp;w=350&amp;h=254">
+                                <div class="card-body rounded-3">
+                                    <h5 class="card-title leaderName">Points: Stephen Curry</h5>
+                                    <p class="card-text large-txt">25.5 <small>per game</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-5 player_card h-100">
+                                <img alt="Kevon Looney" class="card-img-top" data-mptype="image" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3155535.png&amp;w=350&amp;h=254">
+                                <div class="card-body rounded-3">
+                                    <h5 class="card-title leaderName">Rebounds: Kevon Looney</h5>
+                                    <p class="card-text large-txt">7.3 <small>per game</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-5 player_card h-100">
+                                <img alt="Stephen Curry" class="card-img-top" data-mptype="image" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png&amp;w=350&amp;h=254">
+                                <div class="card-body rounded-3">
+                                    <h5 class="card-title leaderName">Assists: Steph Curry</h5>
+                                    <p class="card-text large-txt">6.3 <small>per game</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-5 player_card h-100">
+                                <img alt="Gary Payton II" class="card-img-top" data-mptype="image" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3134903.png&amp;w=350&amp;h=254">
+                                <div class="card-body rounded-3">
+                                    <h5 class="card-title leaderName">Steals: Gary Payton II</h5>
+                                    <p class="card-text large-txt">1.4 <small>per game</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card rounded-5 player_card h-100">
+                                <img alt="Andrew Wiggins" class="card-img-top" data-mptype="image" src="https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3059319.png&amp;w=350&amp;h=254">
+                                <div class="card-body rounded-3">
+                                    <h5 class="card-title leaderName">Blocks: Andrew Wiggins</h5>
+                                    <p class="card-text large-txt">0.7 <small>per game</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+      </div>
+      </main>
+    </body>
+</html>

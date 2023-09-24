@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Places</title>
+
+        <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            let places = document.querySelectorAll('.placeCard');
+
+            var dots = document.querySelectorAll(".dots");
+            var moreText = document.querySelectorAll(".moreTxt");
+            var btnText = document.querySelectorAll(".moreBtn");
+
+
+            for (let i = 0; i < places.length; i++) {
+                places[i].addEventListener('mouseover', function() {
+                    places[i].style.backgroundColor = '#dfebec';
+                    places[i].classList.add('shadow-lg');
+                })
+                places[i].addEventListener('mouseout', function() {
+                    places[i].style.backgroundColor = "white";
+                    places[i].classList.remove('shadow-lg');
+                })
+            }
+
+            for (let i = 0; i < dots.length; i++) {
+                btnText[i].addEventListener('click', function() {
+                    if (dots[i].style.display === "none") {
+                        dots[i].style.display = "inline";
+                        btnText[i].innerHTML = "Read more";
+                        moreText[i].style.display = "none";
+                    } else {
+                        dots[i].style.display = "none";
+                        btnText[i].innerHTML = "Read less";
+                        moreText[i].style.display = "inline";
+                    }
+                })
+            }
+        })
+
+        </script>
+
+    </head>
+    <body>
+        <header class="header shadow-sm rounded-3">
+            <h1 id="intro">Places</h1>
+        </header>
+        <main>
+          <div class="menu-primary-nav-container" id="topics">
+            <ul class="nav nav-tabs nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link text-dark hyplink shadow-sm" href="index.html">Intro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark hyplink shadow-sm" href="ai.html">Artificial Intelligence</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark hyplink shadow-sm" href="warriors.html">Golden State Warriors</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center containerPadding">
+            <div class="col">
+                <div class="card rounded-5 h-100 placeCard">
+                    <a class="nav-link text-dark" href="https://home.cern/">
+                        <img alt="Cern location" class="card-img-top rounded-3" data-mptype="image" src="LHC_location.jpg">
+                    </a>
+                    <div class="card-body rounded-3">
+                        <h5 class="card-title">CERN</h5>
+                        <p class="card-text card-txt">
+                            The European Organization for Nuclear Research operates the largest particle physics laboratory in the world. Located in a northwest suburb of Geneva on the Franco-Swiss border, it serves as a hub of bleeding-edge particle physics research.<span class="dots">..</span>
+                            <span class="moreTxt">One of the main attractions (for interested tourists and physicists) is the Large Hadron Collider (LHC), the largest and highest-energy particle collider in the world, best known for its discovery of the Higgs boson.</span>
+                        </p>
+
+                        <button  class="btn btn-light rounded-3 btn-sm moreBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-5 h-100 placeCard">
+                    <a class="nav-link text-dark" href="https://www.duesseldorf-tourismus.de/en">
+                        <img alt="Dusseldorf" class="card-img-top rounded-3" data-mptype="image" src="dusseldorf.jpg">
+                    </a>
+                    <div class="card-body rounded-3">
+                        <h5 class="card-title">Dusseldorf</h5>
+                        <p class="card-text card-txt">
+                            With the 6th largest living standard in the world and a culturally driven, yet modern, lifestyle, Dusseldorf is not only an amazing tourist attraction, but a desirable place to reside in. Being one of the economic powerhouses of<span class="dots">...</span>
+                            <span class="moreTxt">Germany, it's constantly expanding IT sector, coupled with an affordable living cost makes this an excellent place of work. The affordable living cost is a byproduct of the efficient German health system.</span>
+                        </p>
+
+                        <button class="btn btn-light rounded-3 btn-sm moreBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-5 h-100 placeCard">
+                    <a class="nav-link text-dark" href="https://www.mountainiq.com/europe/alps/">
+                        <img alt="Alps view" class="card-img-top rounded-3" data-mptype="image" src="alps.jpg">
+                    </a>
+                    <div class="card-body rounded-3">
+                        <h5 class="card-title">The Alps</h5>
+                        <p class="card-text card-txt">
+                            Excellent but volatile weather in the region tends to attract tourists who wish to experience the Alps even for short durations. With over 1800 glaciers and vast pastures with diverse flora and fauna, beauty here is found on an unprecedented scale.<span class="dots">..</span>
+                            <span class="moreTxt">The Alps are divided into 6 regions based on their location: Swiss, Austrian, French, Italian, Bavarian and Julian Alps; each of which have their own form of beauty and culture.</span>
+                        </p>
+
+                        <button class="btn btn-light rounded-3 btn-sm moreBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-5 h-100 placeCard">
+                    <a class="nav-link text-dark" href="https://www.nps.gov/yose/index.htm">
+                        <img alt="yosemite view" class="card-img-top rounded-3" data-mptype="image" src="yosemite.jpg">
+                    </a>
+                    <div class="card-body rounded-3">
+                        <h5 class="card-title">Yosemite National Park</h5>
+                        <p class="card-text card-txt">
+                            With granite rocks that glow like fire, species of plants and animals found nowhere else and one of the tallest waterfalls in the world, Yosemite National Park is a no-brainer addition to most people's bucket lists.<span class="dots">..</span>
+                            <span class="moreTxt">The national park, first signed as one in the <a class="text-dark cleanLink rounded-3" href="https://www.doi.gov/blog/turning-100-major-milestones-national-park-service">Yosemite Land Grant,</a>once bid to host the winter Olympics. 75% of its visitors come to the park between May through October.</span>
+                        </p>
+
+                        <button class="btn btn-light rounded-3 btn-sm moreBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-5 h-100 placeCard">
+                    <a class="nav-link text-dark" href="https://www.serengeti.com/">
+                        <img alt="Serengeti view" class="card-img-top rounded-3" data-mptype="image" src="serengeti.jpg">
+                    </a>
+                    <div class="card-body rounded-3">
+                        <h5 class="card-title">Serengeti National Park</h5>
+                        <p class="card-text card-txt">
+                            Being an area with one of the most diverse animal populations in the world ,the Senrengeti National Park offers views of animals living their daily lives: simple infrequent occurences that we find spectacular. The Serengeti is home to one of the largest<span class="dots">...</span>
+                            <span class="moreTxt">concentrations of predators in the world. Being an important spot for human evolution, the area is also home to indegenous tribes like the Maasai people who still live preserve their rich culture inspite of western influence.</span>
+                        </p>
+
+                        <button class="btn btn-light rounded-3 btn-sm moreBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card rounded-5 h-100 placeCard">
+                    <a class="nav-link text-dark" href="https://www.tourmyindia.com/states/ladakh/brief-history-of-ladakh.html">
+                        <img alt="Ladakh view" class="card-img-top rounded-3" data-mptype="image" src="ladakh.jpg">
+                    </a>
+                    <div class="card-body rounded-3">
+                        <h5 class="card-title">Ladakh</h5>
+                        <p class="card-text card-txt">
+                            Ladakh is high above the sea: up to 25,400 feet high to be precise. This, in itself is an attraction to adventure-driven tourists from all around the world. What makes this place all the more surreal is that fact that it is also the location to 2 major lakes, the Pangong<span class="dots">...</span>
+                            <span class="moreTxt">and Tso Kar lake, a 108 feet tall statue of Buddha in an aesthetic location some 10,000ft above the sea and surprisingly, sand dunes. The Hunder Sand Dunes are home to the rare double humped Bactrian camels that have evolved to adapt to the extreme cold, drought and high altitudes.</span>
+                        </p>
+
+                        <button class="btn btn-light rounded-3 btn-sm moreBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main>
+    </body>
+</html>
